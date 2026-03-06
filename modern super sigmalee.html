@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Placeholder Site</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --accent-color: #dbd3e0;
+            --bg-color: rgba(15, 15, 15, 0.8);
+            --blur: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #0f0f0f;
+            color: white;
+            line-height: 1.6;
+            transition: background 0.3s ease;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            left: 0;
+            bottom: -2px;
+            transition: width 0.3s ease;
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+
+        .main {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: var(--bg-color);
+            backdrop-filter: blur(var(--blur));
+            border-radius: 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        nav.nav {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+
+        nav.nav a {
+            font-weight: 600;
+        }
+
+        h1, h2 {
+            color: var(--accent-color);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        li:hover {
+            transform: translateX(5px);
+        }
+
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+        }
+
+        .badge-list img {
+            width: 100px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .badge-list img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div>
+            <h1>Hi, I'm Kiritoasty!</h1>
+            <p>A passionate unpublished author that likes to play games (mostly Minecraft), has awesome friends, develops some apps, and more!</p>
+            <p>There's more on this website! Check out the topbar!</p>
+
+            <h2>Friends</h2>
+            <section class="badge-list">
+                <ul>
+                    <li>Renten/ManyRenten (website: <a href="https://renten.kirisite.xyz">Rentens Website</a>)</li>
+                    <li>Rewindees</li>
+                    <li>Combine</li>
+                    <li>Static</li>
+                    <li>Prismatic</li>
+                    <li>Laikagor</li>
+                    <li>Zuma</li>
+                    <li>Alex / alexandru302</li>
+                    <li>Shishkabob</li>
+                    <li>Chris</li>
+                    <li>Mezz</li>
+                    <li>Draker (website: <a href="https://draker.8os.space">Drakers Website</a>)</li>
+                    <li>There may be a few people missing from this list, let me know if you're missing!</li>
+                </ul>
+            </section>
+
+            <h2>Things I like</h2>
+            <ul>
+                <li><a href="https://nodejs.org">Node</a></li>
+                <li><a href="https://minecraft.net">Minecraft</a></li>
+                <li><a href="https://modrinth.com">Modrinth</a></li>
+                <li><a href="https://prismlauncher.org">Prism Launcher</a></li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>© 2026 Kiritoasty</p>
+        </footer>
+    </div>
+</body>
+</html>
