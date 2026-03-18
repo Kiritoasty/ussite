@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Kiritoasty's Blog Hello Saturn</title>
+
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --accent-color: #dbd3e0; 
+            --bg-color: rgba(15, 15, 15, 0.8); /* main dark background */
+            --blog-bg: rgba(25, 25, 25, 0.9); /* slightly lighter blog post background */
+            --blur: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #0f0f0f;
+            color: white;
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            left: 0;
+            bottom: -2px;
+            transition: width 0.3s ease;
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+
+        .main {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 2rem;
+        }
+
+        nav.nav {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+
+        nav.nav a {
+            font-weight: 600;
+        }
+
+        h1, h2 {
+            color: var(--accent-color);
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+
+        li:hover {
+            transform: translateX(5px);
+        }
+
+        /* Blog post style */
+        .blog-post {
+            background: var(--blog-bg);
+            backdrop-filter: blur(var(--blur));
+            border-radius: 25px; /* rounded corners */
+            padding: 2rem;
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease;
+        }
+
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+        }
+
+        .badge-list img {
+            width: 100px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .badge-list img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- Topbar Navigation -->
+        <nav class="nav">
+            <a href="https://kiritoasty.us">Home</a>
+            <a href="https://blog.kiritoasty.us">Blog</a>
+            <a href="https://con.kiritoasty.us">Contact</a>
+        </nav>
+
+        <!-- Example of adding a new chapter -->
+        <section class="blog-post">
+            <h2>Choosing what domain I should've used for this website (1)</h2>
+            <p>It started out when I wanted to make a new domain because kiritoasty.net, kiritoasty.site, kiritoasty.online, were very unpolished and were mostly just one website. So, I bought a new "kiritoasty" derivative.</p>
+            <p>I chose what I wanted to make the TLD be, so I got to work, I saw kiritoasty.me, kiritoasty.au, and kiritoasty.us, here was the problem about the first two.</p>
+          <h3>One (kiritoasty.me)</h3>
+          <p>I didn't have enough to buy kiritoasty.me because my gift card was 6 dollars at this time, and kiritoasty.me was 10 dollars. So I couldn't buy it, and I came to a conclusion that it looked meh.</p>
+          <h3>Two (kiritoasty.au)</h3>
+          <p>This is what I thought would be the best, it looked awesome, until I realized it was a ccTLD and it belonged to australia, and I had to be a legal citizen of australia but I'm not, which is why I bought the ccTLD US, because I'm in the united states.</p>
+        </section>
+    
+
+        <section class="blog-post">
+            <h2>Developing the website</h2>
+            <p>After I decided what I wanted to make my domains TLD be, I got to work on developing the website, this was a very normal process and my friend Renten mostly talked to me while I was making it.</p>
+        </section>
+
+        <footer>
+            <p>© 2026 Kiritoasty</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+      
